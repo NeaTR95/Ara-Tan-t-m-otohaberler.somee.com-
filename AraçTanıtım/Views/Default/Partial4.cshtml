@@ -1,0 +1,22 @@
+﻿@using AracTanitim.Models.Sınıflara;
+@model List<Haber>
+<div class="padding1">
+    <h4>Önerilen Haberler</h4>
+    @*sol taraf*@
+    <div class="box-left">
+        @foreach (var x in Model)
+        {
+        <div class="bot-img">
+            <img src="@x.HaberImage" style="width:200px; height:90px;" alt="" />
+        </div>
+        <div class="bot-desc">
+            <p>@x.Aciklama.Substring(0,100)...</p>
+        </div>
+        <div class="clear"></div>
+        
+        }
+    </div>
+    @Html.Action("Partial5", "Default")
+
+
+   </div>

@@ -1,0 +1,13 @@
+﻿@using AracTanitim.Models.Sınıflara;
+@model List<Haber>
+<div class="padding">
+    <h4>En Popüler 10 Haber</h4>
+    @{ int i = 0;}
+    @foreach (var x in Model)
+    {
+        <ul class="list list-pad">
+            <li class="list-bg"><span>@{i++;} @i.</span><a href="/Haber/HaberDetay/@x.ID">@x.Baslik.Substring(0,35)...</a></li>
+        </ul>
+    }
+    <a href="/Haber/Index/" class="link1">Tüm Haberleri Göster</a>
+</div>

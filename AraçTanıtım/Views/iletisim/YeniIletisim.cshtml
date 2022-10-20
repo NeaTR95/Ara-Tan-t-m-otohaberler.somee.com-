@@ -1,0 +1,67 @@
+﻿@model AracTanitim.Models.Sınıflara.iletisim
+@{
+    ViewBag.Title = "YeniIletisim";
+    Layout = "~/Views/Shared/_araclayout.cshtml";
+}
+<script>
+    function bas() {
+        window.alert("İlginiz İçin Teşekkürler, tarafınıza en kısa sürede geri dönüş yapılacaktır.");
+    }
+
+</script>
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>İletişim Bilgileri</h3>
+            <p> Bu kısımdan bize ulaşabilir, dilek, istek, ve şikayetlerinizi bildirebilirsiniz.</p>
+        </div>
+        <div class="form">
+            <form class="form" id="contactForm" method="post">
+                <div>
+                    <p style="font-size:20px; color:#9e3256;">Ad Soyad</p>
+                    @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+                </div>
+                <div>
+                    <p style="font-size:20px; color:#9e3256;">Mail Adresi</p>
+                    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                </div>
+                <div>
+                    <p style="font-size:20px; color:#9e3256;">Konu</p>
+                    @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+                </div>
+                <div class="form1">
+                    <div>
+                        <p style="font-size:20px; color:#9e3256;">Mesaj</p>
+                        @Html.TextAreaFor(x => x.Mesaj, 50, 1, new { @class = "textarea" })
+                    </div>
+                </div>
+                <div>
+
+                    <button class="btn" onclick="bas();" style="background-color:#9e3256; color:white;">Gönder</button>
+
+                </div>
+            </form>
+        </div>
+        
+        <div class="clear"></div>
+        <div class="contact-bottom">
+            <div class="contact-left">
+                <div class="contact-add">
+                    <h3>Adres</h3>
+                    <p> </p>
+                    <p>Telephone:1-22-5555</p>
+                    <p>Fax:1-22-5555</p>
+                    <p>Email:<a href="mailto:signup@gmail.com">signup@mail.com</a></p>
+                </div>
+                
+            </div>
+            <div class="contact-map">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.609270226038!2d29.026594315413437!3d40.99003597930255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab868a9505821%3A0x9d555518287662c0!2sSmartPro%20Computer%20Academy!5e0!3m2!1sen!2str!4v1661696532927!5m2!1sen!2str" width="600" height="450" style="border:solid 2px #9e3256; margin-bottom:100px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+

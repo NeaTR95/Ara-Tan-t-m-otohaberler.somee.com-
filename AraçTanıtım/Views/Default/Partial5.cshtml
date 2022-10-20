@@ -1,0 +1,16 @@
+﻿@using AracTanitim.Models.Sınıflara;
+@model List<Haber>
+@*sağ tarafın*@
+<div class="box1-left">
+    @foreach (var y in Model)
+    {
+        <div class="bot-img">
+            <img src="@y.HaberImage" style="width:200px; height:90px;" alt="" />
+        </div>
+        <div class="bot-desc1">
+            <p>@y.Aciklama.Substring(0, 100)...</p>
+        </div>
+        <div class="clear"></div>
+    }
+</div>
+
